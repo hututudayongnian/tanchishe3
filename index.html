@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贪吃蛇游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>贪吃蛇游戏</h1>
+        <div class="score-container">
+            <div>分数: <span id="score">0</span></div>
+            <div>最高分: <span id="highScore">0</span></div>
+        </div>
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <div class="controls">
+            <button id="startBtn">开始游戏</button>
+            <button id="pauseBtn">暂停</button>
+            <button id="resetBtn">重置</button>
+        </div>
+        
+        <!-- 触摸控制区域 - 移动设备专用 -->
+        <div class="touch-controls">
+            <div class="d-pad">
+                <div class="d-pad-btn empty"></div>
+                <div class="d-pad-btn" id="upBtn">↑</div>
+                <div class="d-pad-btn empty"></div>
+                <div class="d-pad-btn" id="leftBtn">←</div>
+                <div class="d-pad-btn empty"></div>
+                <div class="d-pad-btn" id="rightBtn">→</div>
+                <div class="d-pad-btn empty"></div>
+                <div class="d-pad-btn" id="downBtn">↓</div>
+                <div class="d-pad-btn empty"></div>
+            </div>
+            
+            <div class="mobile-controls">
+                <div class="mobile-actions">
+                    <button class="action-btn start" id="mobileStartBtn">开始</button>
+                    <button class="action-btn pause" id="mobilePauseBtn">暂停</button>
+                    <button class="action-btn reset" id="mobileResetBtn">重置</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h3>游戏说明:</h3>
+            <p class="desktop-instruction">使用方向键控制蛇的移动，空格键暂停游戏</p>
+            <p class="mobile-instruction">在触摸屏上滑动或使用方向按钮控制蛇的移动</p>
+            <p>吃到食物蛇会变长，碰到墙壁或自己的身体游戏结束</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
